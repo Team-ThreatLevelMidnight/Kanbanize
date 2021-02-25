@@ -3,7 +3,7 @@ const twilo=require("./twilo");
 const sentmail=require("./sendMail");
 
 
-function scheduleMsg(start_url) {
+module.exports = function scheduleMsg(start_url) {
   await agenda.start();
   agenda.define("Notify users", async (job) => {
     await twilo.send(start_url);
