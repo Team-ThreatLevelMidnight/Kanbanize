@@ -30,7 +30,7 @@ module.exports = async function StartZoomMeeting(topicname,date,time) {
         result = JSON.stringify(response);
         result = JSON.parse(result);
         console.log(result.start_url);
-        agenda.scheduleMsg(start_url); // To schedule msg send
+        agenda.scheduleMsg(result.start_url,result.start_time); // To schedule msg send
 
 
     } catch (error) {

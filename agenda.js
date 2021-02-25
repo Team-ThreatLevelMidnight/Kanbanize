@@ -1,19 +1,21 @@
-const agenda = new Agenda();
+const schedule=require("node-schedule"); // add to package.json
 const twilo=require("./twilo");
 const sentmail=require("./sendMail");
 
 
-module.exports = function scheduleMsg(start_url) {
-  await agenda.start();
-  agenda.define("Notify users", async (job) => {
-    await twilo.send(start_url);
-    await sentmail.sendEmail(receiver_email,email_subject,email_body);
+module.exports = function scheduleMsg(start_url,time) {
+  // Code for parsing date and time goes here
+  temp=time.substring(1,time.length-1);
+  temp2=temp.split('-');
+  datestr=temp2[0].split('/');
+  timestr=temp2[1].split(':');
+  const date=new Date(parseInt(datestr[0]),parseInt(datestr[1]),parseInt(datestr[2]),parseInt(timestr[0]),parseInt(timestr[1]),parseInt(timestr[2]));
+  const job=schedule.scheduleJob(date,function() {
+    twilo.send(start_url);
+    sentmail.sendEmail(receiver_email,email_subject,email_body);
   });
-  
-  (async function () {
-    
-  await agenda.schedule("before 5 minutes", "sent reminder", { userCount: 100 });
-  
-  })();
 }
 
+/*
+If there is a problem, we need to modify Line 8 to Line 12
+*/
