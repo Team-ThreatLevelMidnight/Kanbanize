@@ -8,3 +8,5 @@ function send(meetingURL) {
     to: 'whatsapp:+15017122661'
   }).then(message => console.log(message.sid));
 }
+
+module.exports = send;
