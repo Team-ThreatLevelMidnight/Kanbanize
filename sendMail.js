@@ -2,7 +2,7 @@
 const mailgun = require('mailgun-js');
 
 
-async function sendEmail(receiver_email,email_subject,email_body) {
+module.exports = async function sendEmail(receiver_email,email_subject,email_body) {
 
 var API_KEY = '370f0582a596f401033634996319df87-6e0fd3a4-86de9cfe'; 
 var DOMAIN = 'test.scoopml.app'; 
