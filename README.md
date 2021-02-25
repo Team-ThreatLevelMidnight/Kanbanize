@@ -1,5 +1,4 @@
-# Login and registration with MERN stack
-
+# Kanbnize backend
 
 
 ## Quick Start
