@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const TodoSchema=new Schema({
     tasklist: {
-      type: task
+      type: String
     }
 });
 

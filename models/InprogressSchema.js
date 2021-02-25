@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const InprogressSchema=new Schema({
     tasklist: {
-      type: task
+      type: String
     }
 });
 
