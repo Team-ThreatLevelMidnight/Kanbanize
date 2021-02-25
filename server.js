@@ -35,6 +35,8 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+app.use("/dashboard", dashboard);
+
 
 if(process.env.NODE_ENV === 'production') {
    
