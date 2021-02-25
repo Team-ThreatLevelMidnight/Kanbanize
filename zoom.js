@@ -1,7 +1,7 @@
 const config = require('./config/config');
 const agenda=require("./agenda");
 
-async function StartZoomMeeting(topicname,date,time) {
+module.exports = async function StartZoomMeeting(topicname,date,time) {
     const options = {
         method: "POST",
         uri: "https://api.zoom.us/v2/users/" + email + "/meetings",
