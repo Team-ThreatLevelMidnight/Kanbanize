@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 
+const zoom=require("../../zoom");
+
 // Loading schemas
 const User = require("../../models/UserSchema");
 const Requested = require("../../models/RequestedSchema");
@@ -20,19 +22,11 @@ function checkName(name) {
     return False;
 }
 
-function scheduleMeeting(name) {
-    
-}
-
 // Endpoints to populate db
 router.post("/dashboard/requested", (req,res) => {
     const newTask = new Requested({
         name:req.body.name
     });
-    if(checkName(req.body.name))
-    {
-        scheduleMeeting(req.body.name);
-    }
 });
 
 router.post("/dashboard/todo", (req,res) => {
@@ -45,6 +39,11 @@ router.post("/dashboard/inprogress", (req,res) => {
     const newTask = new Inprogress({
         name:req.body.name
     });
+    if(checkName(req.body.name))
+    {
+        temp=(req.body.name).split('@');
+        zoom.StartZoomMeeting(temp[1],temp[2],temp[3]);
+    }
 });
 
 router.post("/dashboard/done", (req,res) => {

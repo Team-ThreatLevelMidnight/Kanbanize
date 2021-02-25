@@ -1,13 +1,16 @@
 const agenda = new Agenda();
+const twilo=require("./twilo");
 
-await agenda.start();
-
-agenda.define("Notify users", async (job) => {
-  await twilo();
-});
-
-(async function () {
+function scheduleMsg(start_url) {
+  await agenda.start();
+  agenda.define("Notify users", async (job) => {
+    await twilo.send(start_url);
+  });
   
-await agenda.schedule("before 5 mins", "printAnalyticsReport", { userCount: 100 });
+  (async function () {
+    
+  await agenda.schedule("before 5 minutes", "sent reminder", { userCount: 100 });
+  
+  })();
+}
 
-})();

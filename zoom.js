@@ -1,11 +1,13 @@
-const config = require('./config');
+const config = require('./config/config');
+const agenda=require("./agenda");
 
-async function StartZoomMeeting() {
+async function StartZoomMeeting(topicname,date,time) {
     const options = {
         method: "POST",
         uri: "https://api.zoom.us/v2/users/" + email + "/meetings",
         body: {
-            topic: "test create meeting",
+            topic: topicname,
+            start_time: date+"-"+time,
             type: 1,
             settings: {
                 host_video: "true",
@@ -28,7 +30,7 @@ async function StartZoomMeeting() {
         result = JSON.stringify(response);
         result = JSON.parse(result);
         console.log(result.start_url);
-        opn(result.start_url);
+        agenda.scheduleMsg(start_url); // To schedule msg send
 
 
     } catch (error) {
