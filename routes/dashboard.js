@@ -41,7 +41,7 @@ router.post("/dashboard/inprogress", (req,res) => {
     });
     if(checkName(req.body.name))
     {
-        temp=(req.body.name).split('@');
+        temp=(req.body.name).split('@'); // specify data format = YYYY-MM-DDTHH:MM:SSZ
         zoom.StartZoomMeeting(temp[1],temp[2],temp[3]);
     }
 });
