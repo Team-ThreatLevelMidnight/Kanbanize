@@ -5,6 +5,7 @@ const passport = require("passport");
 const path = require("path");
 
 const users = require("./routes/api/users");
+const dashboard = require("./routes/dashboard");
 
 const app = express();
 
