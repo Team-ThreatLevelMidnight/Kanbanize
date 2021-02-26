@@ -1,13 +1,25 @@
 const config = require('./config/config');
 const agenda=require("./agenda");
+const User = require("./models/UserSchema");
 
-module.exports = async function StartZoomMeeting(topicname,date,time) {
+function test()
+{
+    console.log("Test");
+}
+
+async function StartZoomMeeting(topicname,date) {
+    const email=User.find({
+        "email":email
+    },(err,teams) => {
+        console.log(err);
+    });
+    console.log(email);
     const options = {
         method: "POST",
         uri: "https://api.zoom.us/v2/users/" + email + "/meetings",
         body: {
             topic: topicname,
-            start_time: date+"-"+time,
+            start_time: date,
             type: 1,
             settings: {
                 host_video: "true",
@@ -37,3 +49,5 @@ module.exports = async function StartZoomMeeting(topicname,date,time) {
         console.log("API call failed, reason ", error);
     }
 }
+
+module.exports.StartZoomMeeting=StartZoomMeeting;
