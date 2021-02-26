@@ -1,5 +1,5 @@
-const client = require('twilio')(accountSid, authToken);
-const zoom = require('./config'); /// for getting MSG wit url
+const zoom = require('./config/config'); /// for getting MSG wit url
+const client = require('twilio')(zoom.accountSid, zoom.authToken);
 
 module.exports = function send(meetingURL) {
   client.messages.create({

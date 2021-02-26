@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 
 const TodoSchema=new Schema({
     tasklist: {
-      type: String
+      type: String,
+      required: true
     }
 });
 
-module.exports = mongoose.model("task", TodoSchema);
+module.exports = mongoose.model("todo", TodoSchema);

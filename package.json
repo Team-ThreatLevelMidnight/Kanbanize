@@ -27,6 +27,7 @@
     "jwt-decode": "^2.2.0",
     "mailgun-js": "^0.22.0",
     "mongoose": "^5.8.2",
+    "node-schedule": "^2.0.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "react-redux": "^7.1.3",

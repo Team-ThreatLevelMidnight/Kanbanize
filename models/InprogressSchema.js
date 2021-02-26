@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 
 const InprogressSchema=new Schema({
     tasklist: {
-      type: String
+      type: String,
+      required: true
     }
 });
 
-module.exports = mongoose.model("task", InprogressSchema);
+module.exports = mongoose.model("inprogress", InprogressSchema);
