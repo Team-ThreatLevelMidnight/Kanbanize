@@ -25,22 +25,21 @@ function checkName(name) {
 // Endpoints to populate db
 router.post("/dashboard/requested", (req,res) => {
     const newTask = new Requested({
-        name:req.body.name
+        tasklist:req.body.name
     });
-    console.log(res);
     newTask.save().then(res.json(req.body.name)).catch(err => console.log(err));
 });
 
 router.post("/dashboard/todo", (req,res) => {
     const newTask = new Todo({
-        name:req.body.name
+        tasklist:req.body.name
     });
     newTask.save().then(res.json(req.body.name)).catch(err => console.log(err));
 });
 
 router.post("/dashboard/inprogress", (req,res) => {
     const newTask = new Inprogress({
-        name:req.body.name
+        tasklist:req.body.name
     });
     newTask.save().then(res.json(req.body.name)).catch(err => console.log(err));
     if(checkName(req.body.name))
@@ -52,7 +51,7 @@ router.post("/dashboard/inprogress", (req,res) => {
 
 router.post("/dashboard/done", (req,res) => {
     const newTask = new Done({
-        name:req.body.name
+        tasklist:req.body.name
     });
     newTask.save().then(res.json(req.body.name)).catch(err => console.log(err));
 });
