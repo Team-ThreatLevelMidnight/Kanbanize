@@ -28,7 +28,7 @@ async function StartZoomMeeting(topicname,date) {
             }
         },
         auth: {
-            bearer: token
+            bearer:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IktNSHhaV0IyVE11OHR0RlFUT3Bib3ciLCJleHAiOjE2MTQ5MjQ5NTMsImlhdCI6MTYxNDMyMDE2OH0.jLl7V1bU97R1NvDAzqbMermO3zBH8QjK5rHnU-1mvas"
         },
         headers: {
             "User-Agent": "Zoom-api-Jwt-Request",
