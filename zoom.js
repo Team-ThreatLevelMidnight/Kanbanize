@@ -1,11 +1,26 @@
-const config = require('./config');
+const config = require('./config/config');
+const agenda=require("./agenda");
+const User = require("./models/UserSchema");
+var rp = require('request-promise');
 
-async function StartZoomMeeting() {
+function test()
+{
+    console.log("Test");
+}
+
+async function StartZoomMeeting(topicname,date) {
+    const email=User.find({
+        email:"harishsg99@gmail"
+    },(err,teams) => {
+        console.log(err);
+    });
+    console.log(email);
     const options = {
         method: "POST",
-        uri: "https://api.zoom.us/v2/users/" + email + "/meetings",
+        uri: "https://api.zoom.us/v2/users/" + "harishsg99@gmail.com"+ "/meetings",
         body: {
-            topic: "test create meeting",
+            topic: topicname,
+            start_time: date,
             type: 1,
             settings: {
                 host_video: "true",
@@ -14,7 +29,7 @@ async function StartZoomMeeting() {
             }
         },
         auth: {
-            bearer: token
+            bearer:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IktNSHhaV0IyVE11OHR0RlFUT3Bib3ciLCJleHAiOjE2MTQ5MjQ5NTMsImlhdCI6MTYxNDMyMDE2OH0.jLl7V1bU97R1NvDAzqbMermO3zBH8QjK5rHnU-1mvas"
         },
         headers: {
             "User-Agent": "Zoom-api-Jwt-Request",
@@ -25,13 +40,17 @@ async function StartZoomMeeting() {
 
     try {
         const response = await rp(options);
-        result = JSON.stringify(response);
+        var result = JSON.stringify(response);
         result = JSON.parse(result);
         console.log(result.start_url);
-        opn(result.start_url);
+        console.log(date);
+        agenda.scheduleMsg(result.start_url,date);
+         // To schedule msg send
 
 
     } catch (error) {
         console.log("API call failed, reason ", error);
     }
 }
+
+module.exports.StartZoomMeeting=StartZoomMeeting;

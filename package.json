@@ -34,6 +34,8 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
     "twilio": "^3.57.0",
     "uninstall": "0.0.0",
     "validator": "^12.1.0"
