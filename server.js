@@ -5,10 +5,9 @@ const passport = require("passport");
 const path = require("path");
 const users = require("./routes/api/users");
 const dashboard = require("./routes/dashboard");
-const cors = require("cors");
 
 const app = express();
-app.options('*',cors());
+
 // Bodyparser middleware
 app.use(
     bodyParser.urlencoded({
