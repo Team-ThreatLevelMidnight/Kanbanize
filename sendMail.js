@@ -11,7 +11,7 @@ var mailgun = require('mailgun-js') ({apiKey: API_KEY, domain: DOMAIN});
 
 const data = { 
 	"from": "notification@kanbanize.com", 
-	"to": "uaaditya759@gmail.com", 
+	"to": "haran465@gmail.com", 
 	"subject": "hello", 
 	"text": "Don't forget that you have a Zoom meeting to attend in 5 minutes! Find the meeting link here: "+meetingURL 
 }; 
