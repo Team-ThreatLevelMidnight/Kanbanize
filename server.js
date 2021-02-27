@@ -32,13 +32,6 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
 // Routes
 app.use("/api/users", users);
 app.use("/dashboard", dashboard);
