@@ -9,7 +9,14 @@ module.exports = function scheduleMsg(start_url,time) {
   temp2=temp.split('T');
   datestr=temp2[0].split('-');
   timestr=temp2[1].split(':');
-  const date=new Date(parseInt(datestr[0]),parseInt(datestr[1]),parseInt(datestr[2]),parseInt(timestr[0]),parseInt(timestr[1]),parseInt(timestr[2]));
+  if(parseInt(timestr[2])>=30)
+  {
+    const date=new Date(parseInt(datestr[0]),parseInt(datestr[1]),parseInt(datestr[2]),parseInt(timestr[0]),parseInt(timestr[1])-5,parseInt(timestr[2])-30);
+  }
+  else
+  {
+    const date=new Date(parseInt(datestr[0]),parseInt(datestr[1]),parseInt(datestr[2]),parseInt(timestr[0]),parseInt(timestr[1])-6,60+(parseInt(timestr[2])-30));
+  }
   const job=schedule.scheduleJob(date,function() {
     twilo.send(start_url);
     sentmail.sendEmail(receiver_email,email_subject,email_body);
