@@ -4,10 +4,10 @@ const sentmail=require("./sendMail");
 
 function scheduleMsg(start_url,time) {
   // Code for parsing date and time goes here
-  temp=time.substring(0,time.length-1);
-  temp2=temp.split('T');
-  datestr=temp2[0].split('-');
-  timestr=temp2[1].split(':');
+  const temp=time.substring(0,time.length-1);
+  const temp2=temp.split('T');
+  const datestr=temp2[0].split('-');
+  const timestr=temp2[1].split(':');
   if(parseInt(timestr[2])>=30)
   {
     const date=new Date(parseInt(datestr[0]),parseInt(datestr[1]),parseInt(datestr[2]),parseInt(timestr[0]),parseInt(timestr[1])-5,parseInt(timestr[2])-30);
