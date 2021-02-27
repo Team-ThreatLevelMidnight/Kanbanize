@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "Login/Registration authentication App",
   "main": "server.js",
-  "scripts": {
-    "client-install": "npm install --prefix client",
+  "scripts": 
     "start": "npx nodemon --exec npx babel-node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install && npm run build",
-    "server": "npx nodemon --exec npx babel-node server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "heroku-postbuild": "npm install && npm run build",
+    "server": "npx nodemon --exec npx babel-node server.js"
   },
   "keywords": [],
   "author": "",
