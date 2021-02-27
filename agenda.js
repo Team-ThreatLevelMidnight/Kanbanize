@@ -2,8 +2,7 @@ const schedule=require("node-schedule"); // add to package.json
 const twilo=require("./twilo");
 const sentmail=require("./sendMail");
 
-
-module.exports = function scheduleMsg(start_url,time) {
+function scheduleMsg(start_url,time) {
   // Code for parsing date and time goes here
   temp=time.substring(0,time.length-1);
   temp2=temp.split('T');
@@ -22,3 +21,5 @@ module.exports = function scheduleMsg(start_url,time) {
     sentmail.sendEmail(receiver_email,email_subject,email_body);
   });
 }
+
+module.exports.scheduleMsg = scheduleMsg;
