@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
-const cors = require("cors");
 const users = require("./routes/api/users");
 const dashboard = require("./routes/dashboard");
 
@@ -27,7 +26,6 @@ mongoose
     )
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
-app.use(cors()); 
 
 app.use(passport.initialize());
 
