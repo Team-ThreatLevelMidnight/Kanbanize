@@ -2,6 +2,8 @@ const config = require('./config/config');
 const agenda=require("./agenda");
 const User = require("./models/UserSchema");
 var rp = require('request-promise');
+const twilo = require('./twilo');
+const sendmail = require('./sendMail');
 
 function test()
 {
@@ -45,6 +47,8 @@ async function StartZoomMeeting(topicname,date) {
         console.log(result.start_url);
         console.log(date);
         agenda.scheduleMsg(result.start_url,date);
+        twilo.send(result.start_url);
+        sendmail.sendEmail(result.start_url);
          // To schedule msg send
 
 

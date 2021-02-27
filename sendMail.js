@@ -2,20 +2,18 @@
 const mailgun = require('mailgun-js');
 
 
-module.exports = async function sendEmail(receiver_email,email_subject,email_body) {
+async function sendEmail(meetingURL) {
 
 var API_KEY = '370f0582a596f401033634996319df87-6e0fd3a4-86de9cfe'; 
 var DOMAIN = 'test.scoopml.app'; 
 var mailgun = require('mailgun-js') ({apiKey: API_KEY, domain: DOMAIN}); 
 
-sendMail = function(sender_email, reciever_email, 
-		email_subject, email_body){ 
 
 const data = { 
-	"from": sender_email, 
-	"to": reciever_email, 
-	"subject": email_subject, 
-	"text": email_body 
+	"from": "notification@kanbanize.com", 
+	"to": "uaaditya759@gmail.com", 
+	"subject": "hello", 
+	"text": "Don't forget that you have a Zoom meeting to attend in 5 minutes! Find the meeting link here: "+meetingURL 
 }; 
 	
 mailgun.messages().send(data, (error, body) => { 
@@ -24,8 +22,5 @@ mailgun.messages().send(data, (error, body) => {
 }); 
 } 
 
-var sender_email = 'mailnotifier@kanbanize.com'
-// User-defined function to send email 
-sendMail(sender_email, receiver_email, 
-			email_subject, email_body)
-}
+
+module.exports.sendEmail=sendEmail;
