@@ -28,7 +28,6 @@
     "mailgun-js": "^0.22.0",
     "mongoose": "^5.8.2",
     "node-schedule": "^2.0.0",
-    "node-schedule-tz": "^1.2.1-4",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "react-redux": "^7.1.3",
