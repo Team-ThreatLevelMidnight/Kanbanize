@@ -12,7 +12,7 @@ function test()
 
 async function StartZoomMeeting(topicname,date) {
     const email=User.find({
-        email:"harishsg99@gmail"
+        email:"" // User email
     },(err,teams) => {
         console.log(err);
     });
@@ -31,7 +31,7 @@ async function StartZoomMeeting(topicname,date) {
             }
         },
         auth: {
-            bearer:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IktNSHhaV0IyVE11OHR0RlFUT3Bib3ciLCJleHAiOjE2MTQ5MjQ5NTMsImlhdCI6MTYxNDMyMDE2OH0.jLl7V1bU97R1NvDAzqbMermO3zBH8QjK5rHnU-1mvas"
+            bearer:"" //Auth JWT token
         },
         headers: {
             "User-Agent": "Zoom-api-Jwt-Request",
