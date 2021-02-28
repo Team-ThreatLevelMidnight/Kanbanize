@@ -31,6 +31,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Future Roadmap
--Integration with other communication platforms (Google Meet, Microsoft Teams)
--Publish the chrome app into Chrome Webstore
--Add Zoom call functionality into Jira Board
+- Integration with other communication platforms (Google Meet, Microsoft Teams)
+- Publish the chrome app into Chrome Webstore
+- Add Zoom call functionality into Jira Board
