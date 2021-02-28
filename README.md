@@ -25,10 +25,13 @@ To automatically send a Zoom meeting to your Whatsapp and Email,
 Type in a card : Zoom@AddYourMeetDescriptionName@2021-02-26T11:30:00Z (Time (in IST) and Date)
 ```
 
+## 📷 Demo (zoom in to see better)
 
-## 📷 Video Demo
-
- ![gifgif](https://user-images.githubusercontent.com/58134096/109416623-6d1cae80-79e5-11eb-9e52-a004c429ac28.gif)
+ ![gifgif](https://user-images.githubusercontent.com/58134096/109416623-6d1cae80-79e5-11eb-9e52-a004c429ac28.gif) 
+ 
+ ![wht](https://user-images.githubusercontent.com/58134096/109417763-fa163680-79ea-11eb-90d7-7d9d9935a6e0.png)
+ 
+ ![mailz](https://user-images.githubusercontent.com/58134096/109417765-fbdffa00-79ea-11eb-9bc6-b49970859367.png)
 
 ## 🎯 Purpose of the Project
 
