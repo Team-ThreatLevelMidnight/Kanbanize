@@ -41,7 +41,7 @@ Type in a card : Zoom@AddYourMeetDescriptionName@2021-02-26T11:30:00Z (Time (in 
 
 Created with 💖 by Team ThreatLevelMidnight by Hariharan, Aaditya and Harish
 
-- Check out my Linkedin post for this project <a href="https://www.linkedin.com/posts/hariharan-balasubramanian-2a7607187_we-all-know-how-difficult-it-is-to-understand-activity-6750294083803201536-PxaT">here!</a>
+- Check out my Linkedin post for this project <a href="https://www.linkedin.com/posts/hariharan-balasubramanian-2a7607187_i-am-delighted-to-announce-that-team-threatlevelmidnight-activity-6771760734159433728-XA8o">here!</a>
 
 
 ## Contributing
