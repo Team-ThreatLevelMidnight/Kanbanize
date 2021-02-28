@@ -1,7 +1,4 @@
-<p align="center">
-  <a href="https://github.com/Team-ThreatLevelMidnight/Kanbanize">
-    <img src="https://user-images.githubusercontent.com/58134096/109415738-6c354e00-79e0-11eb-8e49-18676c0eae00.png" alt="Logo" width="400" height="250">
-  </a>
+
  
 ## 📌 Introduction 
 
