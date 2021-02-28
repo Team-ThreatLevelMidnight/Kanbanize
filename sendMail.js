@@ -4,8 +4,8 @@ const mailgun = require('mailgun-js');
 
 async function sendEmail(meetingURL) {
 
-var API_KEY = '370f0582a596f401033634996319df87-6e0fd3a4-86de9cfe'; 
-var DOMAIN = 'test.scoopml.app'; 
+var API_KEY = ''; 
+var DOMAIN = ''; 
 var mailgun = require('mailgun-js') ({apiKey: API_KEY, domain: DOMAIN}); 
 
 
