@@ -3,12 +3,12 @@
 
 
 ## 🔧 Techstack
--React.js
--MongoDB
--Express.js
--Twilio WhatsApp API (For Instant WhatsApp integration) 
--Mailgun (For Instant email integration) 
--Zoom SDK (to schedule Zoom call)
+- React.js
+- MongoDB
+- Express.js
+- Twilio WhatsApp API (For Instant WhatsApp integration) 
+- Mailgun (For Instant email integration) 
+- Zoom SDK (to schedule Zoom call)
 
 
 
